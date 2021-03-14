@@ -1,0 +1,28 @@
+<script>
+function myFunc(){
+ var linkm = document.getElementById("youtubelink").value;
+  //alert(''+linkm);
+if(linkm!=""){
+var youtubelink=linkm+"?sub_confirmation=1";
+  document.getElementById('myInput').value = youtubelink;
+ }else{
+document.getElementById('myInput').value = "";
+}
+}
+function myFunction(){
+var copyText = document.getElementById("myInput");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand("copy");
+  alert("Copied... ");
+}
+</script>
+
+<!-- HTML -->
+<p><input type="text" placeholder="Paste or Enter your YouTube Channel Link Here..." id="youtubelink"/></p>
+<p><input class="btn btn-primary" style="width: 100%;" type="submit" value="Generate Subscribe Link" onclick="myFunc();" /></p>
+<div>
+<textarea id="myInput"></textarea></p>
+<div style="float:left; width:49%;"><input type="submit" onclick="myFunction()" style="background-color:green; width:100%;" value="Copy"/></div>
+<div style="float:right; width:50%;"><a href=" https://krishnas.com.np/youtube-subscribe-link-generator/"><input type="submit" style="background-color:red; width:100%;" value="Reset"/></a></div>
+</div>
